@@ -19,17 +19,17 @@
                 // ...add an HTML radio button
                 answers.push(
                     `<label>
-          <input type="radio" name="question${questionNumber}" value="${letter}">
-          ${letter} :
-          ${currentQuestion.answers[letter]}
-        </label>`
+            <input type="radio" name="question${questionNumber}" value="${letter}">
+            ${letter} :
+            ${currentQuestion.answers[letter]}
+          </label>`
                 );
             }
 
             // add this question and its answers to the output
             output.push(
                 `<div class="question"> ${currentQuestion.question} </div>
-      <div class="answers"> ${answers.join("")} </div>`
+        <div class="answers"> ${answers.join("")} </div>`
             );
         });
 
@@ -89,25 +89,94 @@
 
 
     const myQuestions = [{
-            question: "1.This is a sample question:", ///// Write the question inside double quotes
+            question: "1.Reciprocal lattice vector (a*) is:", ///// Write the question inside double quotes
             answers: {
-                a: "This is a sample answer A", ///// Write the option 1 inside double quotes
-                b: "This is a sample answer B", ///// Write the option 2 inside double quotes
+                a: "Parallel to real lattice", ///// Write the option 1 inside double quotes
+                b: "Perpendicular to real lattice vector a", ///// Write the option 2 inside double quotes
+                c: "Parallel to real lattice vector plane b-c", ///// Write the option 2 inside double quotes
+                d: "Perpendicular to real lattice vector plane b-c", ///// Write the option 2 inside double quotes
+
+            },
+            correctAnswer: "d" ///// Write the correct option inside double quotes
+        },
+        {
+            question: "2.Which equivalence hold true:", ///// Write the question inside double quotes
+            answers: {
+                a: "Lλ=Rd", ///// Write the option 1 inside double quotes
+                b: "Ld=Rλ", ///// Write the option 2 inside double quotes
+                c: "LR = dλ", ///// Write the option 2 inside double quotes
+                d: "None of the above", ///// Write the option 2 inside double quotes
+
             },
             correctAnswer: "a" ///// Write the correct option inside double quotes
         },
+        {
+            question: "3.The camera length of the instrument is constant.<br>Note: Camera Length needs to be calculated using a standard (say gold sample) whose lattice parameter is known. ", ///// Write the question inside double quotes
+            answers: {
+                a: "True", ///// Write the option 1 inside double quotes
+                b: "False",
+            },
+            correctAnswer: "b" ///// Write the correct option inside double quotes
+        },
+        {
+            question: "4.What is the zone axis for the following diffraction pattern?<br><img src='images/post4.png'>", ///// Write the question inside double quotes
+            answers: {
+                a: "[001]", ///// Write the option 1 inside double quotes
+                b: "[010]", ///// Write the option 2 inside double quotes
+                c: "[100]", ///// Write the option 2 inside double quotes
+                d: "[110]", ///// Write the option 2 inside double quotes
 
-    {
-      question: "<img src='images/8.PNG'><br>Identify the location of Secondary electron detector",  ///// Write the question inside double quotes
-      answers: {
-        a: "<img src='images/1b.png'>",                  ///// Write the option 1 inside double quotes
-        b: "<img src='images/1a.png'>",                  ///// Write the option 2 inside double quotes
-        c: "<img src='images/1c.PNG'>",      },
-      correctAnswer: "c"                ///// Write the correct option inside double quotes
-    },
+            },
+            correctAnswer: "a" ///// Write the correct option inside double quotes
+        },
+        {
+            question: "5.What is the zone axis for the following diffraction pattern?<br><img src='images/post5.png'>", ///// Write the question inside double quotes
+            answers: {
+                a: "[001]", ///// Write the option 1 inside double quotes
+                b: "[010]", ///// Write the option 2 inside double quotes
+                c: "[100]", ///// Write the option 2 inside double quotes
+                d: "[110]",
+            },
+            correctAnswer: "c" ///// Write the correct option inside double quotes
+        }, ///// To add more questions, copy the section below 
+        {
+            question: "6.What is the zone axis for the following diffraction pattern?<br><img src='images/post6.png'>", ///// Write the question inside double quotes
+            answers: {
+                a: "[111]", ///// Write the option 1 inside double quotes
+                b: "[011]", ///// Write the option 2 inside double quotes
+                c: "[001]", ///// Write the option 2 inside double quotes
+                d: "[100]",
+            },
+            correctAnswer: "a" ///// Write the correct option inside double quotes
+        }, ///// this line
 
 
-        
+        /* To add more MCQ's, copy the below section, starting from open curly braces ( { )
+            till closing curly braces comma ( }, )
+
+            and paste it below the curly braces comma ( below correct answer }, ) of above 
+            question
+
+        Copy below section
+
+        {
+          question: "This is question n?",
+          answers: {
+            a: "Option 1",
+            b: "Option 2",
+            c: "Option 3",
+            d: "Option 4"
+          },
+          correctAnswer: "c"
+        },
+
+        Copy above section
+
+        */
+
+
+
+
     ];
 
 

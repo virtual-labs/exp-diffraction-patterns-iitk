@@ -1,13 +1,686 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<!-- Add CSS at the head of HTML file -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
-<body>
-		<!-- Your code goes here-->
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+<body>
+    <div class="container-fluid main-wrapper" id="part-1">
+        <div class="row">
+            <div class="col-3 ">
+                <div class="Inst panel">
+                    <div class="panel-head">Instructions</div>
+                    1.Place material on machine by clicking on "Place material" button
+                    <br>2.Turn on the machine by clicking on "Turn on machine" button
+                    <br>3. To see the indexing of pattern click on "indexing" button.
+                </div>
+                <div class="panel padd">
+                    <button class="but" id="placeMat" onclick="placeMaterial()"> Place Material</button><br>
+                    <br>
+                    <button class="but" id="beamOn" onclick="beamOn()" disabled> Beam On </button>
+                    <br>
+                    <br>
+                    <button class="but" id="task" onclick="GotoTask_1()">Exercise</button>
+                    <br>
+                    <br>
+                    <button class="but blue w-100" onclick="restart()">Restart</button>
+
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="panel">
+                    <img id="diagram" src="./images/tem.png" style="width: 100%;height: 590px;">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="panel  padd" id="img-col">
+
+                    <img id="diagram2" src="./images/sample.png" style="height: 295px;width: 360px;">
+                    <div id="d2-byline" style="display: none;">Spot pattern obtained for a crystal</div>
+                    <br>
+                    <button class="but" id="index-but" onclick="indexing()"> Indexing </button>
+                    <br>
+
+                    <img id="diagram3" src="./images/sample.png" style="height: 295px;width: 360px;display: none;">
+                    <div id="d3-byline" style="display: none;">Indexing of spot pattern</div>
+                    <!-- <img id="modeImage" src="./images/bse-layout.png" style="height: 607px;position: absolute;
+                    transform: translateX(-51%);position:absolute;left: 50%;width: 87%;top: -1%;display: none;"> 
+                    <canvas style="transform:translateX(-50%);position:absolute;left:50%;" onclick="draw(event)"
+                    id="myCanvas" width=50 height=50></canvas> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="task-1">
+        <div class="row">
+            <button class="col text-white btn bg-success" onclick="GotoSim()">Go back to Simulator</button>
+            <button class="col text-white btn bg-primary" onclick="GotoTask_2()">Q-2) FCC crystal for zone axis of
+                [111]</button>
+            <button class="col text-white btn bg-warning" onclick="GotoTask_3()">Q-3) BCC crystal for zone axis of
+                [111].</button>
+            <button class="col text-white btn bg-info" onclick="GotoTask_4()">Q-4) BCC crystal for zone axis of
+                [011]</button>
+            <button class="col text-white btn bg-danger" onclick="restart()">Restart</button>
+        </div>
+        <div class="row">
+
+            <div class=" col-6">
+                <b> 1. Index the spot pattern of FCC crystal for zone axis of [111].</b>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-3 bord" style="min-width: 359px;">
+                <table>
+                    <tr>
+                        <th>S.No.</th>
+                        <th>x-axis</th>
+                        <th>y-axis</th>
+                        <th>z-axis</th>
+                    </tr>
+                    <tr class="input">
+                        <td>1</td>
+                        <td><input type="number" class="inp" id="t-1"></td>
+                        <td><input type="number" class="inp" id="t-2"></td>
+                        <td><input type="number" class="inp" id="t-3"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>2</td>
+                        <td><input type="number" class="inp" id="t-4"></td>
+                        <td><input type="number" class="inp" id="t-5"></td>
+                        <td><input type="number" class="inp" id="t-6"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>3</td>
+                        <td><input type="number" class="inp" id="t-7"></td>
+                        <td><input type="number" class="inp" id="t-8"></td>
+                        <td><input type="number" class="inp" id="t-9"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>4</td>
+                        <td><input type="number" class="inp" id="t-10"></td>
+                        <td><input type="number" class="inp" id="t-11"></td>
+                        <td><input type="number" class="inp" id="t-12"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>5</td>
+                        <td><input type="number" class="inp" id="t-13"></td>
+                        <td><input type="number" class="inp" id="t-14"></td>
+                        <td><input type="number" class="inp" id="t-15"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>6</td>
+                        <td><input type="number" class="inp" id="t-16"></td>
+                        <td><input type="number" class="inp" id="t-17"></td>
+                        <td><input type="number" class="inp" id="t-18"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>7</td>
+                        <td><input type="number" class="inp" id="t-19"></td>
+                        <td><input type="number" class="inp" id="t-20"></td>
+                        <td><input type="number" class="inp" id="t-21"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>8</td>
+                        <td><input type="number" class="inp" id="t-22"></td>
+                        <td><input type="number" class="inp" id="t-23"></td>
+                        <td><input type="number" class="inp" id="t-24"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>9</td>
+                        <td><input type="number" class="inp" id="t-25"></td>
+                        <td><input type="number" class="inp" id="t-26"></td>
+                        <td><input type="number" class="inp" id="t-27"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>10</td>
+                        <td><input type="number" class="inp" id="t-28"></td>
+                        <td><input type="number" class="inp" id="t-29"></td>
+                        <td><input type="number" class="inp" id="t-30"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>11</td>
+                        <td><input type="number" class="inp" id="t-31"></td>
+                        <td><input type="number" class="inp" id="t-32"></td>
+                        <td><input type="number" class="inp" id="t-33"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>12</td>
+                        <td><input type="number" class="inp" id="t-34"></td>
+                        <td><input type="number" class="inp" id="t-35"></td>
+                        <td><input type="number" class="inp" id="t-36"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>13</td>
+                        <td><input type="number" class="inp" id="t-37"></td>
+                        <td><input type="number" class="inp" id="t-38"></td>
+                        <td><input type="number" class="inp" id="t-39"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>14</td>
+                        <td><input type="number" class="inp" id="t-40"></td>
+                        <td><input type="number" class="inp" id="t-41"></td>
+                        <td><input type="number" class="inp" id="t-42"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>15</td>
+                        <td><input type="number" class="inp" id="t-43"></td>
+                        <td><input type="number" class="inp" id="t-44"></td>
+                        <td><input type="number" class="inp" id="t-45"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>16</td>
+                        <td><input type="number" class="inp" id="t-46"></td>
+                        <td><input type="number" class="inp" id="t-47"></td>
+                        <td><input type="number" class="inp" id="t-48"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>17</td>
+                        <td><input type="number" class="inp" id="t-49"></td>
+                        <td><input type="number" class="inp" id="t-50"></td>
+                        <td><input type="number" class="inp" id="t-51"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>18</td>
+                        <td><input type="number" class="inp" id="t-52"></td>
+                        <td><input type="number" class="inp" id="t-53"></td>
+                        <td><input type="number" class="inp" id="t-54"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>19</td>
+                        <td><input type="number" class="inp" id="t-55"></td>
+                        <td><input type="number" class="inp" id="t-56"></td>
+                        <td><input type="number" class="inp" id="t-57"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>20</td>
+                        <td><input type="number" class="inp" id="t-58"></td>
+                        <td><input type="number" class="inp" id="t-59"></td>
+                        <td><input type="number" class="inp" id="t-60"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>21</td>
+                        <td><input type="number" class="inp" id="t-61"></td>
+                        <td><input type="number" class="inp" id="t-62"></td>
+                        <td><input type="number" class="inp" id="t-63"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>22</td>
+                        <td><input type="number" class="inp" id="t-64"></td>
+                        <td><input type="number" class="inp" id="t-65"></td>
+                        <td><input type="number" class="inp" id="t-66"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>23</td>
+                        <td><input type="number" class="inp" id="t-67"></td>
+                        <td><input type="number" class="inp" id="t-68"></td>
+                        <td><input type="number" class="inp" id="t-69"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>24</td>
+                        <td><input type="number" class="inp" id="t-70"></td>
+                        <td><input type="number" class="inp" id="t-71"></td>
+                        <td><input type="number" class="inp" id="t-72"></td>
+                    </tr>
+                </table>
+
+                <br>
+                <button class="but" onclick="check1()">Submit</button>
+                &nbsp;
+                <button class="but" onclick="show1()">Show Answer Image</button>
+            </div>
+            <div class="col-4 bord" style="min-width: 359px;"><img src="./images/t-ques-1.png"></div>
+            <div class="col-4 bord" style="min-width: 359px;"><b>Answer Image</b><img id="img-ans-1"
+                    src="./images/t-ans-1.png"></div>
+        </div>
+        <!-- <canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">
+            Your browser does not support the canvas element.
+        </canvas> -->
+    </div>
+
+    <div id="task-2">
+        <div class="row">
+            <button class="col text-white btn bg-success" onclick="GotoSim()">Go back to Simulator</button>
+            <button class="col text-white btn bg-primary" onclick="GotoTask_1()">Q-1) FCC crystal for zone axis of
+                [011]</button>
+            <button class="col text-white btn bg-warning" onclick="GotoTask_3()">Q-3) BCC crystal for zone axis of
+                [111].</button>
+            <button class="col text-white btn bg-info" onclick="GotoTask_4()">Q-4) BCC crystal for zone axis of
+                [011]</button>
+            <button class="col text-white btn bg-danger" onclick="restart()">Restart</button>
+
+        </div>
+        <div class="row">
+            <div class=" col-6">
+                <b> 2. Index the spot pattern of FCC crystal for zone axis of [111].</b>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-3 bord" style="min-width: 359px;">
+                <table>
+                    <tr>
+                        <th>S.No.</th>
+                        <th>x-axis</th>
+                        <th>y-axis</th>
+                        <th>z-axis</th>
+                    </tr>
+                    <tr class="input">
+                        <td>1</td>
+                        <td><input type="number" class="inp" id="two-1"></td>
+                        <td><input type="number" class="inp" id="two-2"></td>
+                        <td><input type="number" class="inp" id="two-3"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>2</td>
+                        <td><input type="number" class="inp" id="two-4"></td>
+                        <td><input type="number" class="inp" id="two-5"></td>
+                        <td><input type="number" class="inp" id="two-6"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>3</td>
+                        <td><input type="number" class="inp" id="two-7"></td>
+                        <td><input type="number" class="inp" id="two-8"></td>
+                        <td><input type="number" class="inp" id="two-9"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>4</td>
+                        <td><input type="number" class="inp" id="two-10"></td>
+                        <td><input type="number" class="inp" id="two-11"></td>
+                        <td><input type="number" class="inp" id="two-12"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>5</td>
+                        <td><input type="number" class="inp" id="two-13"></td>
+                        <td><input type="number" class="inp" id="two-14"></td>
+                        <td><input type="number" class="inp" id="two-15"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>6</td>
+                        <td><input type="number" class="inp" id="two-16"></td>
+                        <td><input type="number" class="inp" id="two-17"></td>
+                        <td><input type="number" class="inp" id="two-18"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>7</td>
+                        <td><input type="number" class="inp" id="two-19"></td>
+                        <td><input type="number" class="inp" id="two-20"></td>
+                        <td><input type="number" class="inp" id="two-21"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>8</td>
+                        <td><input type="number" class="inp" id="two-22"></td>
+                        <td><input type="number" class="inp" id="two-23"></td>
+                        <td><input type="number" class="inp" id="two-24"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>9</td>
+                        <td><input type="number" class="inp" id="two-25"></td>
+                        <td><input type="number" class="inp" id="two-26"></td>
+                        <td><input type="number" class="inp" id="two-27"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>10</td>
+                        <td><input type="number" class="inp" id="two-28"></td>
+                        <td><input type="number" class="inp" id="two-29"></td>
+                        <td><input type="number" class="inp" id="two-30"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>11</td>
+                        <td><input type="number" class="inp" id="two-31"></td>
+                        <td><input type="number" class="inp" id="two-32"></td>
+                        <td><input type="number" class="inp" id="two-33"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>12</td>
+                        <td><input type="number" class="inp" id="two-34"></td>
+                        <td><input type="number" class="inp" id="two-35"></td>
+                        <td><input type="number" class="inp" id="two-36"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>13</td>
+                        <td><input type="number" class="inp" id="two-37"></td>
+                        <td><input type="number" class="inp" id="two-38"></td>
+                        <td><input type="number" class="inp" id="two-39"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>14</td>
+                        <td><input type="number" class="inp" id="two-40"></td>
+                        <td><input type="number" class="inp" id="two-41"></td>
+                        <td><input type="number" class="inp" id="two-42"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>15</td>
+                        <td><input type="number" class="inp" id="two-43"></td>
+                        <td><input type="number" class="inp" id="two-44"></td>
+                        <td><input type="number" class="inp" id="two-45"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>16</td>
+                        <td><input type="number" class="inp" id="two-46"></td>
+                        <td><input type="number" class="inp" id="two-47"></td>
+                        <td><input type="number" class="inp" id="two-48"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>17</td>
+                        <td><input type="number" class="inp" id="two-49"></td>
+                        <td><input type="number" class="inp" id="two-50"></td>
+                        <td><input type="number" class="inp" id="two-51"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>18</td>
+                        <td><input type="number" class="inp" id="two-52"></td>
+                        <td><input type="number" class="inp" id="two-53"></td>
+                        <td><input type="number" class="inp" id="two-54"></td>
+                    </tr>
+
+                </table>
+
+                <br>
+                <button class="but" onclick="check2()">Submit</button>
+                &nbsp;
+                <button class="but" onclick="show2()">Show Answer Image</button>
+            </div>
+            <div class="col-4 bord" style="min-width: 359px;"><img src="./images/t-ques-2.png"></div>
+            <div class="col-4 bord" style="min-width: 359px;"><b>Answer Image</b><img id="img-ans-2"
+                    src="./images/t-ans-2.png"></div>
+        </div>
+        <!-- <canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">
+            Your browser does not support the canvas element.
+        </canvas> -->
+    </div>
+    <div id="task-3">
+        <div class="row">
+            <button class="col text-white btn bg-success" onclick="GotoSim()">Go back to Simulator</button>
+            <button class="col text-white btn bg-warning" onclick="GotoTask_1()">Q-1) FCC crystal for zone axis of
+                [011]</button>
+            <button class="col text-white btn bg-primary" onclick="GotoTask_2()">Q-2) FCC crystal for zone axis of
+                [111]</button>
+            <button class="col text-white btn bg-info" onclick="GotoTask_4()">Q-4) BCC crystal for zone axis of
+                [011]</button>
+            <button class="col text-white btn bg-danger" onclick="restart()">Restart</button>
+
+        </div>
+        <div class="row">
+            <div class=" col-6">
+                <b> 3. Index the spot pattern of BCC crystal for zone axis of [111].</b>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-3 bord" style="min-width: 359px;">
+                <table>
+                    <tr>
+                        <th>S.No.</th>
+                        <th>x-axis</th>
+                        <th>y-axis</th>
+                        <th>z-axis</th>
+                    </tr>
+                    <tr class="input">
+                        <td>1</td>
+                        <td><input type="number" class="inp" id="three-1"></td>
+                        <td><input type="number" class="inp" id="three-2"></td>
+                        <td><input type="number" class="inp" id="three-3"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>2</td>
+                        <td><input type="number" class="inp" id="three-4"></td>
+                        <td><input type="number" class="inp" id="three-5"></td>
+                        <td><input type="number" class="inp" id="three-6"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>3</td>
+                        <td><input type="number" class="inp" id="three-7"></td>
+                        <td><input type="number" class="inp" id="three-8"></td>
+                        <td><input type="number" class="inp" id="three-9"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>4</td>
+                        <td><input type="number" class="inp" id="three-10"></td>
+                        <td><input type="number" class="inp" id="three-11"></td>
+                        <td><input type="number" class="inp" id="three-12"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>5</td>
+                        <td><input type="number" class="inp" id="three-13"></td>
+                        <td><input type="number" class="inp" id="three-14"></td>
+                        <td><input type="number" class="inp" id="three-15"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>6</td>
+                        <td><input type="number" class="inp" id="three-16"></td>
+                        <td><input type="number" class="inp" id="three-17"></td>
+                        <td><input type="number" class="inp" id="three-18"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>7</td>
+                        <td><input type="number" class="inp" id="three-19"></td>
+                        <td><input type="number" class="inp" id="three-20"></td>
+                        <td><input type="number" class="inp" id="three-21"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>8</td>
+                        <td><input type="number" class="inp" id="three-22"></td>
+                        <td><input type="number" class="inp" id="three-23"></td>
+                        <td><input type="number" class="inp" id="three-24"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>9</td>
+                        <td><input type="number" class="inp" id="three-25"></td>
+                        <td><input type="number" class="inp" id="three-26"></td>
+                        <td><input type="number" class="inp" id="three-27"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>10</td>
+                        <td><input type="number" class="inp" id="three-28"></td>
+                        <td><input type="number" class="inp" id="three-29"></td>
+                        <td><input type="number" class="inp" id="three-30"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>11</td>
+                        <td><input type="number" class="inp" id="three-31"></td>
+                        <td><input type="number" class="inp" id="three-32"></td>
+                        <td><input type="number" class="inp" id="three-33"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>12</td>
+                        <td><input type="number" class="inp" id="three-34"></td>
+                        <td><input type="number" class="inp" id="three-35"></td>
+                        <td><input type="number" class="inp" id="three-36"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>13</td>
+                        <td><input type="number" class="inp" id="three-37"></td>
+                        <td><input type="number" class="inp" id="three-38"></td>
+                        <td><input type="number" class="inp" id="three-39"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>14</td>
+                        <td><input type="number" class="inp" id="three-40"></td>
+                        <td><input type="number" class="inp" id="three-41"></td>
+                        <td><input type="number" class="inp" id="three-42"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>15</td>
+                        <td><input type="number" class="inp" id="three-43"></td>
+                        <td><input type="number" class="inp" id="three-44"></td>
+                        <td><input type="number" class="inp" id="three-45"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>16</td>
+                        <td><input type="number" class="inp" id="three-46"></td>
+                        <td><input type="number" class="inp" id="three-47"></td>
+                        <td><input type="number" class="inp" id="three-48"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>17</td>
+                        <td><input type="number" class="inp" id="three-49"></td>
+                        <td><input type="number" class="inp" id="three-50"></td>
+                        <td><input type="number" class="inp" id="three-51"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>18</td>
+                        <td><input type="number" class="inp" id="three-52"></td>
+                        <td><input type="number" class="inp" id="three-53"></td>
+                        <td><input type="number" class="inp" id="three-54"></td>
+                    </tr>
+
+                </table>
+
+                <br>
+                <button class="but" onclick="check3()">Submit</button>
+                &nbsp;
+                <button class="but" onclick="show3()">Show Answer Image</button>
+            </div>
+            <div class="col-4 bord" style="min-width: 359px;"><img src="./images/t-ques-3.png"></div>
+            <div class="col-4 bord" style="min-width: 359px;"><b>Answer Image</b><img id="img-ans-3"
+                    src="./images/t-ans-3.png"></div>
+        </div>
+        <!-- <canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">
+            Your browser does not support the canvas element.
+        </canvas> -->
+    </div>
+    <div id="task-4">
+        <div class="row">
+            <button class="col text-white btn bg-success" onclick="GotoSim()">Go back to Simulator</button>
+            <button class="col text-white btn bg-warning" onclick="GotoTask_1()">Q-1) FCC crystal for zone axis of
+                [011]</button>
+            <button class="col text-white btn bg-primary" onclick="GotoTask_2()">Q-2) FCC crystal for zone axis of
+                [111]</button>
+            <button class="col text-white btn bg-info" onclick="GotoTask_3()">Q-3) BCC crystal for zone axis of
+                [111].</button>
+            <button class="col text-white btn bg-danger" onclick="restart()">Restart</button>
+
+        </div>
+        <div class="row">
+            <div class=" col-6">
+                <b> 4. Index the spot pattern of BCC crystal for zone axis of [011].</b>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-3 bord" style="min-width: 359px;">
+                <table>
+                    <tr>
+                        <th>S.No.</th>
+                        <th>x-axis</th>
+                        <th>y-axis</th>
+                        <th>z-axis</th>
+                    </tr>
+                    <tr class="input">
+                        <td>1</td>
+                        <td><input type="number" class="inp" id="four-1"></td>
+                        <td><input type="number" class="inp" id="four-2"></td>
+                        <td><input type="number" class="inp" id="four-3"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>2</td>
+                        <td><input type="number" class="inp" id="four-4"></td>
+                        <td><input type="number" class="inp" id="four-5"></td>
+                        <td><input type="number" class="inp" id="four-6"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>3</td>
+                        <td><input type="number" class="inp" id="four-7"></td>
+                        <td><input type="number" class="inp" id="four-8"></td>
+                        <td><input type="number" class="inp" id="four-9"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>4</td>
+                        <td><input type="number" class="inp" id="four-10"></td>
+                        <td><input type="number" class="inp" id="four-11"></td>
+                        <td><input type="number" class="inp" id="four-12"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>5</td>
+                        <td><input type="number" class="inp" id="four-13"></td>
+                        <td><input type="number" class="inp" id="four-14"></td>
+                        <td><input type="number" class="inp" id="four-15"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>6</td>
+                        <td><input type="number" class="inp" id="four-16"></td>
+                        <td><input type="number" class="inp" id="four-17"></td>
+                        <td><input type="number" class="inp" id="four-18"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>7</td>
+                        <td><input type="number" class="inp" id="four-19"></td>
+                        <td><input type="number" class="inp" id="four-20"></td>
+                        <td><input type="number" class="inp" id="four-21"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>8</td>
+                        <td><input type="number" class="inp" id="four-22"></td>
+                        <td><input type="number" class="inp" id="four-23"></td>
+                        <td><input type="number" class="inp" id="four-24"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>9</td>
+                        <td><input type="number" class="inp" id="four-25"></td>
+                        <td><input type="number" class="inp" id="four-26"></td>
+                        <td><input type="number" class="inp" id="four-27"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>10</td>
+                        <td><input type="number" class="inp" id="four-28"></td>
+                        <td><input type="number" class="inp" id="four-29"></td>
+                        <td><input type="number" class="inp" id="four-30"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>11</td>
+                        <td><input type="number" class="inp" id="four-31"></td>
+                        <td><input type="number" class="inp" id="four-32"></td>
+                        <td><input type="number" class="inp" id="four-33"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>12</td>
+                        <td><input type="number" class="inp" id="four-34"></td>
+                        <td><input type="number" class="inp" id="four-35"></td>
+                        <td><input type="number" class="inp" id="four-36"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>13</td>
+                        <td><input type="number" class="inp" id="four-37"></td>
+                        <td><input type="number" class="inp" id="four-38"></td>
+                        <td><input type="number" class="inp" id="four-39"></td>
+                    </tr>
+                    <tr class="input">
+                        <td>14</td>
+                        <td><input type="number" class="inp" id="four-40"></td>
+                        <td><input type="number" class="inp" id="four-41"></td>
+                        <td><input type="number" class="inp" id="four-42"></td>
+                    </tr>
+
+                </table>
+
+                <br>
+                <button class="but" onclick="check4()">Submit</button>
+                &nbsp;
+                <button class="but" onclick="show4()">Show Answer Image</button>
+            </div>
+            <div class="col-4 bord" style="min-width: 359px;"><img src="./images/t-ques-4.png"></div>
+            <div class="col-4 bord" style="min-width: 359px;"><b>Answer Image</b><img id="img-ans-4"
+                    src="./images/t-ans-4.png"></div>
+        </div>
+        <!-- <canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">
+            Your browser does not support the canvas element.
+        </canvas> -->
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/zoom.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/task.js"></script>
+    <script>
+
+    </script>
 </body>
+
 </html>
