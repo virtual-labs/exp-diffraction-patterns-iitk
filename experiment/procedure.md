@@ -1,4 +1,4 @@
-### Procedure
+
 1.Optimize the beam size in order to focus only on the region the diffraction pattern has to be obtained. Focus on a crystalline region.<br>
 2.Obtain the diffraction pattern for a particular zone axis. The symmetry will pertain to the symmetry of real crystal.<br>
 3.In order to obtain the 3-D symmetry information of the crystal, orient the crystal differently and obtain the diffraction pattern at other orientations as well.<br> 

@@ -73,4 +73,4 @@ Usually a simple diffraction pattern (say belonging to [001] or [100] is capture
   <source src="images/exp8-indexing-DP_mod (1).mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video><br>
-Fig:Video on Electron Diffraction for various materials
+Video on Electron Diffraction for various materials
