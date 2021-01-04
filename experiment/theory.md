@@ -1,7 +1,15 @@
 ## Concept of Reciprocal Space:
-When the crystal is the image in real space, the diffraction pattern is the image of crystal lattice in reciprocal space. For diffraction, the reciprocal lattice basis vector is perpendicular to a set of crystal planes that are set apart by inverse of the length of the real-space lattice basis vector. In other words, if (100) plan has unit cell parameter of a, then the reciprocal lattice of (100) will appear ‘1/a’ apart. Like real lattice vector, the reciprocal lattice vector can also be translated to another origin maintaining the symmetry. 
-If we start plotting the various planes with respect to an origin, then, in the reciprocal space, the longer interplanar spacing (say for (100) plane) will fall closer to the origin, whereas intermediate planar spacing (say for (200) plane) will fall twice the length of (100) plane. This makes the crystal retain the real-space symmetry to reciprocal space. Extending this dependence, the real lattice basis vectors (a, b, and c) can be related to the basis vectors of the reciprocal space (a*, b*, c*) as:
+<div><div style="float:left;width:55%;text-align: justify;text-justify: inter-word; margin-right:40px;">When the crystal is the image in real space, the diffraction pattern is the image of crystal lattice in reciprocal space. For diffraction, the reciprocal lattice basis vector is perpendicular to a set of crystal planes that are set apart by inverse of the length of the real-space lattice basis vector. In other words, if (100) plan has unit cell parameter of a, then the reciprocal lattice of (100) will appear ‘1/a’ apart. Like real lattice vector, the reciprocal lattice vector can also be translated to another origin maintaining the symmetry. 
+If we start plotting the various planes with respect to an origin, then, in the reciprocal space, the longer interplanar spacing (say for (100) plane) will fall closer to the origin, whereas intermediate planar spacing (say for (200) plane) will fall twice the length of (100) plane. This makes the crystal retain the real-space symmetry to reciprocal space. Extending this dependence, the real lattice basis vectors (a, b, and c) can be related to the basis vectors of the reciprocal space (a*, b*, c*) as:</div>
 <br><br>
+<div style="float:left;width:40%;border: solid 1 px black;">
+<video width="320" height="240" controls>
+  <source src="images/exp8-indexing-DP_mod%20(1).mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video><br>Video on Electron Diffraction for various materials</div>
+</div>
+<div style="content: '.';clear: both;display: block;height: 0;visibility: hidden;"></div>
+<div style ="text-align: justify;text-justify: inter-word;">
 <img src="images/eq.jpg"  height="200" width="200"><br>
 where a.(b×c) is the volume of the real crystal unit cell. It may also be noted that the reciprocal basis vector a* is perpendicular to real space b-c plane (and so is b* perpendicular to c-a plane, and so is c* perpendicular to a-b plane), Fig. 1. <br><br>
 <img src="images/f1.jpg"><br>
@@ -68,9 +76,11 @@ Usually a simple diffraction pattern (say belonging to [001] or [100] is capture
 (ii)	Any point in reciprocal lattice intersects the Ewald sphere, the Bragg’s condition is satisfied and the plane diffracts. But it may be noted that each reciprocal lattice point is not really a point (due to excitation error), and can be a rel-rod, and even intersect the non-flatter region of Ewald sphere and appear as a spot on the diffraction pattern. <br> <br>
 (iii)	Under ideal condition, when beam is exactly parallel to zone axis, there should be no spots in diffraction pattern. So, the excitation error allows appearance of spots even when there is deviation from Bragg’s equation!  <br> <br>
 (iv)	The separation between the planes is provided by the normal vector pointing from one plane to other.  <br> <br>
-(v)	The angle between the planes can also be obtained by the angle between the vectors starting from origin to these two planes. Hence, the angular symmetry is also retained in the diffraction pattern of the crystals.  <br> <br>
+(v)	The angle between the planes can also be obtained by the angle between the vectors starting from origin to these two planes. Hence, the angular symmetry is also retained in the diffraction pattern of the crystals.  <br> <br></div>
+<!--
 <video width="320" height="240" controls>
   <source src="images/exp8-indexing-DP_mod (1).mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video><br>
 Video on Electron Diffraction for various materials
+-->
