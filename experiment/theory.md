@@ -6,7 +6,7 @@ If we start plotting the various planes with respect to an origin, then, in the 
 <video width="320" height="240" controls>
   <source src="images/exp8-indexing-DP_mod%20(1).mp4" type="video/mp4">
   Your browser does not support the video tag.
-</video><br>Video on Electron Diffraction for various materials</div>
+</video><br>Video on Indexing of Diffraction Patterns (Ring Pattern & Spot Pattern)</div>
 </div>
 <div style="content: '.';clear: both;display: block;height: 0;visibility: hidden;"></div>
 <div style ="text-align: justify;text-justify: inter-word;">
