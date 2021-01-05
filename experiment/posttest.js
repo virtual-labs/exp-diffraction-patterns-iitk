@@ -89,7 +89,7 @@
 
 
     const myQuestions = [{
-            question: "1.Reciprocal lattice vector (a*) is:", ///// Write the question inside double quotes
+            question: "1. Reciprocal lattice vector (a*) is:", ///// Write the question inside double quotes
             answers: {
                 a: "Parallel to real lattice", ///// Write the option 1 inside double quotes
                 b: "Perpendicular to real lattice vector a", ///// Write the option 2 inside double quotes
@@ -100,7 +100,7 @@
             correctAnswer: "d" ///// Write the correct option inside double quotes
         },
         {
-            question: "2.Which equivalence hold true:", ///// Write the question inside double quotes
+            question: "2. Which equivalence hold true:", ///// Write the question inside double quotes
             answers: {
                 a: "Lλ=Rd", ///// Write the option 1 inside double quotes
                 b: "Ld=Rλ", ///// Write the option 2 inside double quotes
@@ -111,7 +111,7 @@
             correctAnswer: "a" ///// Write the correct option inside double quotes
         },
         {
-            question: "3.The camera length of the instrument is constant.<br>Note: Camera Length needs to be calculated using a standard (say gold sample) whose lattice parameter is known. ", ///// Write the question inside double quotes
+            question: "3. The camera length of the instrument is constant.<br>Note: Camera Length needs to be calculated using a standard (say gold sample) whose lattice parameter is known. ", ///// Write the question inside double quotes
             answers: {
                 a: "True", ///// Write the option 1 inside double quotes
                 b: "False",
@@ -119,7 +119,7 @@
             correctAnswer: "b" ///// Write the correct option inside double quotes
         },
         {
-            question: "4.What is the zone axis for the following diffraction pattern?<br><img src='images/post4.png'>", ///// Write the question inside double quotes
+            question: "4. What is the zone axis for the following diffraction pattern?<br><img src='images/post4.png'>", ///// Write the question inside double quotes
             answers: {
                 a: "[001]", ///// Write the option 1 inside double quotes
                 b: "[010]", ///// Write the option 2 inside double quotes
@@ -130,7 +130,7 @@
             correctAnswer: "a" ///// Write the correct option inside double quotes
         },
         {
-            question: "5.What is the zone axis for the following diffraction pattern?<br><img src='images/post5.png'>", ///// Write the question inside double quotes
+            question: "5. What is the zone axis for the following diffraction pattern?<br><img src='images/post5.png'>", ///// Write the question inside double quotes
             answers: {
                 a: "[001]", ///// Write the option 1 inside double quotes
                 b: "[010]", ///// Write the option 2 inside double quotes
@@ -140,7 +140,7 @@
             correctAnswer: "c" ///// Write the correct option inside double quotes
         }, ///// To add more questions, copy the section below 
         {
-            question: "6.What is the zone axis for the following diffraction pattern?<br><img src='images/post6.png'>", ///// Write the question inside double quotes
+            question: "6. What is the zone axis for the following diffraction pattern?<br><img src='images/post6.png'>", ///// Write the question inside double quotes
             answers: {
                 a: "[111]", ///// Write the option 1 inside double quotes
                 b: "[011]", ///// Write the option 2 inside double quotes
