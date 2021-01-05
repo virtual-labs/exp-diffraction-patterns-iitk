@@ -45,7 +45,7 @@ Second step is to now obtain the physical parameters from the ring or spot patte
 
 <br>
 
-## Evaluating Ring Pattern:
+Evaluating Ring Pattern:<br>
 We shall start with ring-pattern first (Fig. 4). Take the print-out of the image or keep the screen magnification fixed, and then note the radius of each ring. For better accuracy, it is better to measure diameter and then divide by two because the center point is not clear, so error might be higher. Now take the ratio of the radius (or diameter, as the divider of two will cancel for each radius) of the rings one by one. Now, we need to know the correlation with the interplanar spacing of the crystals (say SC, BCC and FCC), and we will be able to find which crystal actually shows this symmetry. 
 <br><br>
 <img src="images/f4.jpg"><br>
@@ -63,7 +63,7 @@ Or the value of d comes out to be 2.335 Å (or 0.2335 nm). Now, as we have ident
 <img src="images/6.jpg"><br>
 as we have identified the first diffracting plane to be (111). Thus, value of lattice parameter is obtained as 4.044 Å (0r 0.4044 nm).<br><br>
 
-## Evaluating Spot Pattern:
+Evaluating Spot Pattern:<br>
 Evaluation of the spot pattern preserves the vector relationship as each spot represents diffracting plane, and multiple crystals have NOT overlapped to convert that to a ring pattern. Once, a spot pattern is obtained (Fig. 5), the angles between the planes are preserved and also the separation distance is inverse of the spacing between the two planes (appearing as spot in the diffraction pattern).  From here, we observe the symmetry, which appears to be four fold, but a closer look (calculating the distance and angle between the spots) can only confirm if the sample has 4-fold symmetry or a 1 fold symmetry for the given zone axis. Now, assuming that the crystal has 4-fold symmetry here, then the crystal can either be a cubic crystal or even a tetragonal crystal (as the third axis is not imaged here). Thus, to render a 3-D symmetry, diffraction from the other zone axis incorporating the third axis also needs to be undertaken. <br>
 <br>
 <img src="images/f5.jpg"><br> <br>
@@ -71,7 +71,7 @@ Fig. 5: a) Spot pattern obtained for a crystal, and b) The indexing of the spot 
 <br>
 Usually a simple diffraction pattern (say belonging to [001] or [100] is captured, and based on that the two lattice vectors can be captured. Then, keeping one axis same, the information of the third lattice vector can be captured and indexed. In that fashion the information on the complete crystal can be obtained and indexed.
 <br>
-<h3>Notes:</h3>
+Notes:<br>
 (i)	A diffraction spot is obtained when the Ewald sphere (of radius 1/λ) intersects the array of reciprocal lattice points. Due to very low wavelength, the Ewald sphere is almost flat and intersects many points (unlike X-ray radiation). <br> <br>
 (ii)	Any point in reciprocal lattice intersects the Ewald sphere, the Bragg’s condition is satisfied and the plane diffracts. But it may be noted that each reciprocal lattice point is not really a point (due to excitation error), and can be a rel-rod, and even intersect the non-flatter region of Ewald sphere and appear as a spot on the diffraction pattern. <br> <br>
 (iii)	Under ideal condition, when beam is exactly parallel to zone axis, there should be no spots in diffraction pattern. So, the excitation error allows appearance of spots even when there is deviation from Bragg’s equation!  <br> <br>
