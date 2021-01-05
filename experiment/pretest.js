@@ -89,7 +89,7 @@
 
 
     const myQuestions = [{
-            question: "1.The diffraction spots present the intersection of direction vector with the incident beam<br>Note: The diffraction spots present the individual plane that has resulted diffraction of the incident beam", ///// Write the question inside double quotes
+            question: "1. The diffraction spots present the intersection of direction vector with the incident beam<br>Note: The diffraction spots present the individual plane that has resulted diffraction of the incident beam", ///// Write the question inside double quotes
             answers: {
                 a: "True", ///// Write the option 1 inside double quotes
                 b: "False", ///// Write the option 2 inside double quotes
@@ -98,7 +98,7 @@
         },
 
         {
-            question: "2.Zone axis has the following relation to the incident beam<br>Note: The diffraction angles are within 0-1 degree of incident beam, hence the zone axis is almost parallel to the incident beam.", ///// Write the question inside double quotes
+            question: "2. Zone axis has the following relation to the incident beam<br>Note: The diffraction angles are within 0-1 degree of incident beam, hence the zone axis is almost parallel to the incident beam.", ///// Write the question inside double quotes
             answers: {
                 a: "Almost parallel to incident beam", ///// Write the option 1 inside double quotes
                 b: "Parallel to the diffracting plane", ///// Write the option 2 inside double quotes
@@ -110,7 +110,7 @@
         }, ///// To add more questions, copy the section below 
         ///// this line
         {
-            question: "3.The reciprocal lattice has the separation between planes equal to:", ///// Write the question inside double quotes
+            question: "3. The reciprocal lattice has the separation between planes equal to:", ///// Write the question inside double quotes
             answers: {
                 a: "Inverse of the lattice parameter", ///// Write the option 1 inside double quotes
                 b: "Inverse of the inter-planar spacing ", ///// Write the option 2 inside double quotes
@@ -121,7 +121,7 @@
             correctAnswer: "b" ///// Write the correct option inside double quotes
         },
         {
-            question: "4.The spot pattern will appear in ___________ fashion for tetragonal crystal with zone axis of [001]", ///// Write the question inside double quotes
+            question: "4. The spot pattern will appear in ___________ fashion for tetragonal crystal with zone axis of [001]", ///// Write the question inside double quotes
             answers: {
                 a: "Square", ///// Write the option 1 inside double quotes
                 b: "Rectangular", ///// Write the option 2 inside double quotes
@@ -132,7 +132,7 @@
             correctAnswer: "a" ///// Write the correct option inside double quotes
         },
         {
-            question: "5.The spot pattern will appear in ___________ fashion for tetragonal crystal with zone axis of [100]", ///// Write the question inside double quotes
+            question: "5. The spot pattern will appear in ___________ fashion for tetragonal crystal with zone axis of [100]", ///// Write the question inside double quotes
             answers: {
                 a: "Square", ///// Write the option 1 inside double quotes
                 b: "Rectangular", ///// Write the option 2 inside double quotes
