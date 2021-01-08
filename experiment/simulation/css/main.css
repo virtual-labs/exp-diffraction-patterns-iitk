@@ -1,1 +1,176 @@
-/* You CSS goes in here */
+html {
+  font-size: 14px;
+}
+
+.slider:disabled:hover {
+  cursor: not-allowed !important;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #f1f4f6;
+  padding: 1% 1% 1% 1%;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+}
+
+.panel img {
+  width: 100%;
+}
+
+.slider:disabled:hover {
+  cursor: not-allowed !important;
+}
+
+a {
+  color: rgb(0, 174, 255) !important;
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.panel {
+  background: #fff;
+  width: 100%;
+  /* height: 100%; */
+  box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03), 0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03), 0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05), 0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+  padding: 0.5rem;
+  min-width: 250px;
+}
+
+.panel .panel-head {
+  background: #1089ff;
+  color: #fff;
+  margin: -0.5rem;
+  padding: 0.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.padd {
+  padding: 0.5rem 2rem;
+  text-align: center;
+}
+
+.but {
+  background: none;
+  /* color: #fff; */
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.1rem;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 0.1rem rgba(0, 0, 0, 0.5);
+  transition: all 0.2s;
+  border-radius: 15px;
+  border: 2px solid #1089ff;
+}
+
+.but.sm {
+  padding: 0.5rem 1rem;
+}
+
+.but:hover {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 0 0.1rem #fff;
+}
+
+.but:focus {
+  outline: none !important;
+}
+
+.but.blue:hover {
+  background: #1089ff;
+  color: #fff;
+  box-shadow: 0 0 0 0.1rem #1089ff;
+}
+
+.but.green:hover {
+  background: #11c96d;
+  color: #fff;
+  box-shadow: 0 0 0 0.1rem #10ff89;
+}
+
+.but:disabled {
+  opacity: 0.4;
+}
+
+.but:disabled:hover {
+  cursor: not-allowed;
+}
+
+#diagram {
+  min-width: 250px;
+}
+
+th, tr, td {
+  border: 1px black solid;
+}
+
+.inp {
+  width: 5rem;
+}
+
+.red {
+  color: white;
+  background-color: red;
+}
+
+.green {
+  color: black;
+  background-color: greenyellow;
+}
+
+.bord {
+  border: 2px solid black;
+}
+
+#task-1 {
+  align-content: center;
+  text-align: center;
+  display: none;
+}
+
+#task-2 {
+  display: none;
+  align-content: center;
+  text-align: center;
+}
+
+#task-3 {
+  display: none;
+  align-content: center;
+  text-align: center;
+}
+
+#task-4 {
+  display: none;
+  align-content: center;
+  text-align: center;
+}
+
+#img-ans-1 {
+  display: none;
+}
+
+#img-ans-2 {
+  display: none;
+}
+
+#img-ans-3 {
+  display: none;
+}
+
+#img-ans-4 {
+  display: none;
+}
