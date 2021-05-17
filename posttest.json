@@ -1,0 +1,53 @@
+[{
+	"question": "1. Reciprocal lattice vector (a*) is:",
+	"answers": {
+		"a": "Parallel to real lattice",
+		"b": "Perpendicular to real lattice vector a",
+		"c": "Parallel to real lattice vector plane b-c",
+		"d": "Perpendicular to real lattice vector plane b-c"
+	},
+	"correctAnswer": "d"
+}, {
+	"question": "2. Which equivalence hold true:",
+	"answers": {
+		"a": "Lλ=Rd",
+		"b": "Ld=Rλ",
+		"c": "LR = dλ",
+		"d": "None of the above"
+	},
+	"correctAnswer": "a"
+}, {
+	"question": "3. The camera length of the instrument is constant.<br>Note: Camera Length needs to be calculated using a standard (say gold sample) whose lattice parameter is known. ",
+	"answers": {
+		"a": "True",
+		"b": "False"
+	},
+	"correctAnswer": "b"
+}, {
+	"question": "4. What is the zone axis for the following diffraction pattern?<br><img src='images/post4.png'>",
+	"answers": {
+		"a": "[001]",
+		"b": "[010]",
+		"c": "[100]",
+		"d": "[110]"
+	},
+	"correctAnswer": "a"
+}, {
+	"question": "5. What is the zone axis for the following diffraction pattern?<br><img src='images/post5.png'>",
+	"answers": {
+		"a": "[001]",
+		"b": "[010]",
+		"c": "[100]",
+		"d": "[110]"
+	},
+	"correctAnswer": "c"
+}, {
+	"question": "6. What is the zone axis for the following diffraction pattern?<br><img src='images/post6.png'>",
+	"answers": {
+		"a": "[111]",
+		"b": "[011]",
+		"c": "[001]",
+		"d": "[100]"
+	},
+	"correctAnswer": "a"
+}]
