@@ -1,0 +1,43 @@
+[{
+	"question": "1. The diffraction spots present the intersection of direction vector with the incident beam<br>Note: The diffraction spots present the individual plane that has resulted diffraction of the incident beam",
+	"answers": {
+		"a": "True",
+		"b": "False"
+	},
+	"correctAnswer": "b"
+}, {
+	"question": "2. Zone axis has the following relation to the incident beam<br>Note: The diffraction angles are within 0-1 degree of incident beam, hence the zone axis is almost parallel to the incident beam.",
+	"answers": {
+		"a": "Almost parallel to incident beam",
+		"b": "Parallel to the diffracting plane",
+		"c": "Perpendicular to the diffracting plane"
+	},
+	"correctAnswer": "a"
+}, {
+	"question": "3. The reciprocal lattice has the separation between planes equal to:",
+	"answers": {
+		"a": "Inverse of the lattice parameter",
+		"b": "Inverse of the inter-planar spacing ",
+		"c": "Square-root of the lattice parameter",
+		"d": "Square-root of the inter-planar spacing"
+	},
+	"correctAnswer": "b"
+}, {
+	"question": "4. The spot pattern will appear in ___________ fashion for tetragonal crystal with zone axis of [001]",
+	"answers": {
+		"a": "Square",
+		"b": "Rectangular",
+		"c": "Triangular",
+		"d": "Hexagonal"
+	},
+	"correctAnswer": "a"
+}, {
+	"question": "5. The spot pattern will appear in ___________ fashion for tetragonal crystal with zone axis of [100]",
+	"answers": {
+		"a": "Square",
+		"b": "Rectangular",
+		"c": "Triangular",
+		"d": "Hexagonal"
+	},
+	"correctAnswer": "b"
+}]
